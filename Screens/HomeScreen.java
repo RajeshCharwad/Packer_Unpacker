@@ -34,7 +34,6 @@ public class HomeScreen {
         helperText.setBounds(Dimensions.helperLabelBoundX, Dimensions.helperLabelBoundY, dimension.width, Dimensions.helperLabelHeight);
 
         JFrame windowTitle = new JFrame(Constants.windowScreenTitle);
-        //windowTitle.setLocationRelativeTo(null);
         windowTitle.setLocation(dimension.width / 2 - windowTitle.getSize().width / 2, dimension.height / 2 - windowTitle.getSize().height / 2);
         JButton btnPackFiles = new JButton(Constants.buttonPackTitle);
         btnPackFiles.setBounds(Dimensions.packButtonBoundX, Dimensions.packButtonBoundY, Dimensions.packButtonWidth, Dimensions.packButtonHeight);
