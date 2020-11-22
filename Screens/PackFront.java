@@ -57,6 +57,10 @@ public class PackFront {
         btnSubmit.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent eobj) {
                 String fileName = tfNewFile.getText();
+                if (!new File(directoryField.getText()).isDirectory()) {
+                    JOptionPane.showMessageDialog(new JFrame(), "Directory does not exist", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
                 if (!isFileExists(fileName)) {
                     new Packer(directoryField.getText(), fileName);
                     new HomeScreen();
